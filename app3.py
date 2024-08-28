@@ -10,7 +10,7 @@ from pandasai import Agent
 #from pandasai.llm.local_llm import LocalLLM
 from pandasai import SmartDataframe
 
-os.environ["PANDASAI_API_KEY"] = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
+#os.environ["PANDASAI_API_KEY"] = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
 
 
 st.title("Data Analysis using Prompts")
