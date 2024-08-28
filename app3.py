@@ -26,17 +26,21 @@ uploaded_file = st.file_uploader("Upload a CSV file", type=['csv'])
 
 # reading the uploaded dataset
 if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file)
-    st.write(data.head(2))
+    try:
+        data = pd.read_csv(uploaded_file)
+        st.write(data.head(2))
 
-    agent = Agent(data)
+        agent = Agent(data)
 
-    prompt = st.text_area("Enter your prompt")
+        prompt = st.text_area("Enter your prompt")
     
-    if st.button("Generate"):
-        if prompt:
-            with st.spinner("Generating response..."):
-                st.write(agent.chat(prompt))
+        if st.button("Generate"):
+            if prompt:
+                with st.spinner("Generating response..."):
+                    st.write(agent.chat(prompt))
+    except Exception as e:
+        st.error(f"Error processing file: {e}")
+    
                 
 
 
