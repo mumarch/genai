@@ -26,7 +26,7 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
     st.write(data.head(2))
 
-    agent = Agent(data, api_key=API_KEY)
+    agent = Agent(data)
 
     prompt = st.text_area("Enter your prompt")
     
