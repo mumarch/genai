@@ -5,14 +5,17 @@ import os
 import pandas as pd
 import streamlit as st # type: ignore
 from pandasai import Agent
+from pandasai import LLM
 #import numpy as np
 
 #from pandasai.llm.local_llm import LocalLLM
 from pandasai import SmartDataframe
 
 #os.environ["PANDASAI_API_KEY"] = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
-API_KEY = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
+#API_KEY = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
 
+# Securely store API key in environment variable (recommended)
+API_KEY = os.environ.get("PANDASAI_API_KEY")
 
 st.title("Data Analysis using Prompts")
 
@@ -23,7 +26,7 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
     st.write(data.head(2))
 
-    agent = Agent(data)
+    agent = Agent(data, api_key=API_KEY)
 
     prompt = st.text_area("Enter your prompt")
     
