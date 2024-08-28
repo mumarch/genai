@@ -15,7 +15,7 @@ from pandasai import SmartDataframe
 #API_KEY = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
 
 # Securely store API key in environment variable (recommended)
-API_KEY = os.environ.get("PANDASAI_API_KEY")
+PANDASAI_API_KEY = os.environ.get("PANDASAI_API_KEY")
 if not PANDASAI_API_KEY:
     raise ValueError("PANDASAI_API_KEY environment variable is not set.")
 
