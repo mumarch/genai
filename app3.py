@@ -16,6 +16,8 @@ from pandasai import SmartDataframe
 
 # Securely store API key in environment variable (recommended)
 API_KEY = os.environ.get("PANDASAI_API_KEY")
+if not PANDASAI_API_KEY:
+    raise ValueError("PANDASAI_API_KEY environment variable is not set.")
 
 st.title("Data Analysis using Prompts")
 
