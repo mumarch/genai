@@ -5,7 +5,7 @@ import os
 import pandas as pd
 import streamlit as st # type: ignore
 from pandasai import Agent
-from pandasai import LLM
+#from pandasai import LLM
 #import numpy as np
 
 #from pandasai.llm.local_llm import LocalLLM
