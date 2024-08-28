@@ -11,6 +11,7 @@ from pandasai import Agent
 from pandasai import SmartDataframe
 
 #os.environ["PANDASAI_API_KEY"] = "$2a$10$fM2M9OzQKknKddp1YYRGKe/OpllKpux0yKRlZo8y2zTKBb0M/0U9a"
+PANDASAI_API_KEY = PANDASAI_API_KEY
 
 
 st.title("Data Analysis using Prompts")
